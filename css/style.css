@@ -12,15 +12,21 @@
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
+.chao{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
 .fire-ball{
     position: absolute;
     bottom: 25px;
     margin-left: 150px;
-    width: 25px;
+    width: 35px;
     transform: rotate(220deg);
     background-color: none;
     z-index: 1;
-
+    display: none;
 }
 .shot-fireball{
     animation: fireball-animation 1.5s infinite linear;
@@ -30,14 +36,16 @@
     bottom: 0;
     width: 60px;
     height: 100px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: pipe-animation 2s infinite linear;
 }
 .super-mario{
-    width: 120px;
+    width: 110px;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
+    padding-top: 462px;
     margin-left: 100px ;
     z-index: 99;
+    /* transform-origin: center; */
 } 
 .jump-mario{
     animation: mario-animation 500ms ease-out;
@@ -46,6 +54,7 @@
 .cloud-game{
     position: absolute;
     width: 550px;
+    margin-top: 20px;
     animation: cloud-animation 15s infinite linear;
 }
 
@@ -82,10 +91,10 @@
     20% {bottom: 100px;}
     30% {bottom: 150px;}
     40% {bottom: 200px;}
-    50% {bottom: 200px;}
+    50% {bottom: 250px;}
     60% {bottom: 200px;}   
     70% {bottom: 150px;}
     80% {bottom: 100px;}
-    90% {bottom: 50px; }
+    90% {bottom: 50px;}
     100%{bottom: 0;}
 }

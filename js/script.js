@@ -9,19 +9,20 @@ const fireball  = document.querySelector(".fire-ball");
 /* Air function, mesma função acima */
 const jump = () => {
     mario.classList.add("jump-mario");
-    fireball.style.display = 'none';
+    //fireball.style.display = 'none';
 
     setTimeout(() => {
         mario.classList.remove("jump-mario");
-        fireball.style.display = 'block';
+        //fireball.style.display = 'block';
     }, 500);
 }
 
 const fire = () => { 
     fireball.classList.add("shot-fireball");
-
+    fireball.style.display = 'block';
     setTimeout(() => {
         fireball.classList.remove("shot-fireball");
+        fireball.style.display = 'none';
     }, 1500);
 }
 
@@ -31,18 +32,18 @@ const loopGame = setInterval(() => {
         .getComputedStyle(mario)
         .bottom.replace("px","");
 
-    if (pipePosition <= 200 &&
+    if (pipePosition <= 170 &&
         pipePosition > 0 &&
         marioPosition < 60) {
-        pipe.style.animation = "none";
+        pipe.style.animation = "none"; 
         pipe.style.left = `${pipePosition}px`;
 
         mario.style.animation = "none";
         mario.style.bottom = `${marioPosition}px`;
 
-        mario.src = "./Images/mario-game-over.png";
-        mario.style.width = "75px";
-        //  mario.style.marginLeft = "45px";
+        mario.src = "./Images/bebe3.gif";
+        mario.style.width = "100px";
+         //  mario.style.marginLeft = "45px";
 
         clearInterval(loopGame);
     }
