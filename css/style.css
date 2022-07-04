@@ -52,11 +52,20 @@ body{
 .rotate-mario{
         animation: rotate-animation 400ms ease-out;
 }    
-.cloud-game{
+.cloud-game1{
     position: absolute;
     width: 55%;
-    margin-top: 50px;
-    animation: cloud-animation 15s infinite linear;
+    margin-top: 7%;
+    animation: cloud-animation-1 15s infinite linear;
+    z-index:30;
+}
+.cloud-game2{
+    position: absolute;
+    width: 35%;
+    margin-top: 20%;
+    margin-left: 150px;
+    animation: cloud-animation-2 25s infinite linear;
+    z-index:20;
 }
 .floor{
     width: 300%;
@@ -82,10 +91,10 @@ body{
 
 @keyframes fireball-animation{
     from{
-        left: 10px;
+        left: 7%;
     }
     to{
-        left: 100%;
+        left: 90%;
     }
 }
 
@@ -98,9 +107,17 @@ body{
     }
 }
 
-@keyframes cloud-animation{
+@keyframes cloud-animation-1{
     from{
-        right: -550px;
+        right: -55%;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes cloud-animation-2{
+    from{
+        right: -45%;
     }
     to{
         right: 100%;
